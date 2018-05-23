@@ -56,6 +56,16 @@ export default class Presentation extends React.Component {
               color: "red"
             }}>failed</span>
           </Text>
+          <Notes>
+            <ol>
+              <li>My name is Łukasz, got 5 minutes only, so intro on the end</li>
+              <li>Will just storm through slides</li>
+              <li>It's DON'T do it at home scenario</li>
+              <li>It's for frontend who learn devops/backend</li>
+              <li>It's for fullstack who build tools</li>
+              <li>It's for who want to know mechanics/limits of JSX</li>
+            </ol>
+          </Notes>
         </Slide>
         <Slide
           transition={['zoom', 'slide']}
@@ -71,10 +81,11 @@ export default class Presentation extends React.Component {
           </List>
           <Notes>
             <ol>
-              <li>You need to understand hosting, domain, ssl, load balancing/CDN</li>
-              <li>Each has own configs, sometimes they are wonky to work together</li>
+              <li>Understand hosting, webservers, SSL, CDNs, etc.</li>
+              <li>Many, various, different configs, make problems when work together</li>
               <li>Some in ruby, some in python, some in other</li>
               <li>AWS setup will be different to Azure, to Heroku, etc</li>
+              <li>Even Docker can fail your expectations</li>
             </ol>
           </Notes>
         </Slide>
@@ -94,6 +105,7 @@ export default class Presentation extends React.Component {
           </List>
           <Notes>
             <ol>
+              <li>We already use JSX as abstraction</li>
               <li>You build static and dynamic websites</li>
               <li>You can do rendering on server-side</li>
               <li>You can build iOS and Android</li>
@@ -188,10 +200,30 @@ export default class Presentation extends React.Component {
           </Heading>
           <List>
             <ListItem>JSX describe state, not the process</ListItem>
-            <ListItem>JSX can be applied asynchronously</ListItem>
+            <ListItem>render function = (props, state) => VirtualDOM</ListItem>
+            <ListItem>render function != (props, state) => result</ListItem>
+          </List>
+        </Slide>
+        <Slide
+          transition={['zoom', 'slide']}
+        >
+          <Heading size={6} textColor="secondary" caps>
+            &lt;JSX&gt; doesn't solve everything
+          </Heading>
+          <List>
+            <ListItem>VirtualDOM can be applied asynchronously</ListItem>
             <ListItem>But render methods can't be asynchronous</ListItem>
             <ListItem>Async JSX render = side effects</ListItem>
-            <ListItem>Rewriting complex using abstraction makes it more complex</ListItem>
+          </List>
+        </Slide>
+        <Slide
+          transition={['zoom', 'slide']}
+        >
+          <Heading size={6} textColor="secondary" caps>
+            &lt;JSX&gt; doesn't solve everything
+          </Heading>
+          <List>
+            <ListItem>Rewriting complex tools using abstraction makes them more complex</ListItem>
           </List>
         </Slide>
         <Slide
@@ -278,6 +310,7 @@ awsmobile publish --test`}
             <ListItem>Analytics</ListItem>
             <ListItem>Database</ListItem>
             <ListItem>File storage</ListItem>
+            <ListItem>Amplify frontend lib</ListItem>
             <ListItem>iOS, Android, Web, React Native, Unity, Xamarin</ListItem>
             <ListItem>aws.amazon.com/mobile/resources</ListItem>
           </List>
